@@ -1,0 +1,287 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Kdam+Thmor+Pro&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+
+/* variables */
+:root {
+  --color-primario:#0e002e ;
+  --color-secundario: rgb(180, 179, 181);
+  --color-terciario: turquoise;
+  --color-bordes: turquoise;
+  --color-header-footer: rgb(5, 0, 34);
+  --color-decoracion: #6a5ff7;
+
+  --fuente-monserrat: "Monserrat", sans-serif;
+  --fuente-krona: "Krona", sans-serif;
+}
+
+/*estilo basico de la pagina*/
+* {
+  padding: 0;
+  margin: 0;
+}
+.header {
+  padding: 2% 0% 1% 10%;
+  background-color: var(--color-header-footer);
+}
+.header_menu {
+  display: flex;
+  gap: 90px;
+}
+.header_menu_link {
+  font-family: var(--fuente-krona);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--color-terciario);
+  text-decoration: none;
+}
+
+body{
+  overflow: visible;
+  background-image: url('/assets/fondo4.jpg');
+  background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
+  background-position: center; /* Centra la imagen */
+  background-repeat: no-repeat; /* Evita que la imagen se repita */
+  height: 100hv; /* Ajusta la altura del main para que ocupe toda la pantalla */
+}
+
+/*Main*/
+.cuerpo {
+  display: flex;
+  align-items: center;
+  padding: 1% 0% 0% 0%;
+  gap: 10px;
+}
+.seccion_cuerpo{
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 0% 0% 5% 10%;
+  height: 100%;
+  width: 100%;
+}
+.presentacion_titulo {
+  color: var(--color-primario);
+  font-family: var(--fuente-krona);
+  font-size: 2.25rem;
+  padding: 2%;
+}
+.titulo_resaltado {
+  padding: 3px;
+  background-color: var(--color-primario);
+  color: turquoise;
+  border: 1px solid turquoise;
+}
+.presentacion {
+  background-color: var(--color-primario);
+  border-radius: 15px;
+  padding: 2%;
+  font-size: 1.5rem;
+  font-family: var(--fuente-monserrat);
+  font-weight: bold;
+  color: var(--color-secundario);
+}
+.presentacion a {
+  text-decoration: none;
+  color: var(--color-terciario);
+}
+
+.subtitulo_enlaces {
+  font-family: var(--fuente-monserrat);
+  font-weight: bold;
+  font-size: 1rem;
+  color: var(--color-decoracion);
+  text-decoration: none;
+}
+/*CAJAS*/
+.caja_botones {
+  display: flex;
+  width: 50%;
+  padding: 2% 0% 0% 10%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 150px;
+}
+.caja_botones_redes {
+  display: flex;
+  width: 50%;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+}
+.subtitulo_portafolio_y_redes {
+  align-items: center;
+  color: var(--color-subtitulos);
+  font-size: 1rem;
+}
+.caja_boton_portafolio {
+  display: flex;
+  width: 75%;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/*BOTONES*/
+.btn_redes {
+  background-color: var(--color-primario);
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  width: 150%;
+  color: var(--color-terciario);
+  border-radius: 5px;
+  border: 1px solid var(--color-bordes);
+  padding: 12px;
+  text-decoration: none;
+  font-family: var(--fuente-monserrat);
+  font-size: 1rem;
+  text-align: center;
+}
+.btn_redes:hover {
+  box-shadow: 0px 0px 10px 1px var(--color-terciario);
+}
+.btn_portafolio {
+  background-color: var(--color-primario);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 5% 8%;
+  border-radius: 10px;
+  border: 1px solid var(--color-bordes) ;
+}
+.btn_portafolio:hover {
+  box-shadow: 0px 0px 10px 1px var(--color-terciario);
+}
+
+/*iconos*/
+.icono {
+  width: 25px;
+  background: url("icono.png") no-repeat center center;
+  background-size: contain;
+}
+.icono_portafolio {
+  height: 160px;
+  width: 180px;
+  border-radius: 15px;
+  filter: blur(1px);
+}
+.icono_portafolio:hover{
+    filter: blur(0px);
+}
+.icono_descarga {
+  background-color: var(--color-subtitulos);
+  height: 30px;
+  width: 30px;
+  border-radius: 360px;
+  padding: 1.5px;
+}
+.seccion_derecha {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  padding: 1% 0% 2% 2%;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+}
+/*FOTO*/
+.miFoto {
+  border-radius: 30px;
+  box-shadow: 0 0 10px 6px turquoise;
+  width: 320px;
+  height: 400px;
+}
+.barras {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.skill {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 50%;
+  font-size: 10px;
+  letter-spacing: 1px;
+  background-color: var(--color-primario);
+  border-radius: 10px;
+  color: var(--color-terciario);
+  font-family: var(--fuente-krona);
+  padding: 1%;
+}
+.progress-bar {
+  background-color: var(--color-primario);
+  border-radius: 5px;
+  overflow: hidden;
+  height: 15px;
+  width: 100%;
+}
+
+.progress {
+  background-color: var(--color-terciario);
+  height: 100%;
+  text-align: right;
+  padding-right: 10px;
+  color: var(--color-primario);
+  font-weight: bold;
+  line-height: 20px; /* Align text vertically */
+  justify-content: center;
+}
+.footer {
+  background-color: var(--color-header-footer);
+  color: var(--color-terciario);
+  text-align: center;
+  font-family: var(--fuente-monserrat);
+  font-size: 1.5rem;
+  font-weight: 400;
+  padding: 1rem 0;
+}
+
+/*diseño responsivo*/
+@media (max-width: 950px){
+    .header{
+      display: flex;
+        padding: 3%;
+        width: 100%;
+        height: 100%;
+    }
+    .header_menu{
+      justify-content: space-evenly;
+      width: 100%;
+      gap: 1px;
+    }
+    .header_menu_link{
+      font-size: 1.3rem;
+    }
+    .cuerpo{
+        flex-direction: column-reverse;
+        padding: 5%;
+        gap: 20px;
+    }
+    .seccion_cuerpo{
+        width: auto;
+        gap: 30px;
+    }
+    .presentacion_titulo{
+      font-size: 2rem;
+    }
+    .presentacion{
+      font-size: 1.5rem;
+    }
+    .caja_botones{
+        width: auto;
+        flex-direction: column-reverse;
+        gap: 30px;
+        padding: 0;
+    }
+    .seccion_derecha{
+        width: auto;
+    }
+    .footer{
+      padding: 2%;
+      width: auto;
+  }
+}

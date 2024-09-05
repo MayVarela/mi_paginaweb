@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es-co">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Encriptador de texto</title>
+    <link rel="stylesheet" href="./styles/style_encriptador.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Encriptador de texto</h1>
+      <a class="volver" href="index.html">Volver</a>
+    </header>
+    <main class="seccionMain">
+      <form onsubmit="return false;">
+        <p class="sugerencia">
+          <img src="./assets/exclamacion.png" alt="exclamacion" />
+          Usa solo letras minúsculas y sin acento.</p>
+          <textarea
+            class="cuadro_texto_usuario"
+            name="texto_usuario"
+            id="texto_usuario"
+            rows="15"
+            cols="80"
+            placeholder="Escribe tu texto aquí..."></textarea>
+            
+        <div class="caja_btn_cripto">
+        <input class="btn_cripto" type="button" value="Encriptar" onclick="validateText()" />
+        <input class="btn_cripto"
+          type="button"
+          value="Desencriptar"
+          onclick="desencriptarTexto()" />
+        </div>
+      </form>
+      <div id="area_salida" class="div_salida_texto">
+        <img
+          class="imagen"
+          id="imagen"
+          src="./assets/encriptador2.jpg"
+          alt="persona_encriptando" />
+        <br />
+        <p class="salida_texto" id="salida_texto">
+          El texto encriptado aparecera aqui!
+        </p>
+        <button class="btn_copiar_texto" onclick="copiarTexto()">
+          ¡Copiar texto!
+        </button>
+      </div>
+    </main>
+    <script src="./js/encriptador.js"></script>
+    <footer class="footer">
+      &copy;2024 Desarrollado por Michael Varela G.
+    </footer>
+  </body>
+</html>
