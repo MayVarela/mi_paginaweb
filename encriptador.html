@@ -4,47 +4,67 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Encriptador de texto</title>
+    <link rel="icon" href="./assets/candado.png" type="image/png">
     <link rel="stylesheet" href="./styles/style_encriptador.css" />
   </head>
   <body>
+     <!-- Canvas para el efecto de lluvia -->
+    <canvas id="canvas" style="background: #111;"></canvas> 
+
     <header class="header">
       <h1>Encriptador de texto</h1>
       <a class="volver" href="index.html">Volver</a>
     </header>
     <main class="seccionMain">
+
+    <div class="div_entrada_texto"> 
+
       <form onsubmit="return false;">
         <p class="sugerencia">
           <img src="./assets/exclamacion.png" alt="exclamacion" />
-          Usa solo letras minúsculas y sin acento.</p>
+          Usa solo letras minúsculas y sin acento.
+        </p>
           <textarea
             class="cuadro_texto_usuario"
             name="texto_usuario"
             id="texto_usuario"
             rows="15"
-            cols="80"
-            placeholder="Escribe tu texto aquí..."></textarea>
+            cols="70"
+            placeholder="Escribe tu texto aquí...">
+          </textarea>
             
         <div class="caja_btn_cripto">
-        <input class="btn_cripto" type="button" value="Encriptar" onclick="validateText()" />
-        <input class="btn_cripto"
+
+          <input class="btn_cripto" type="button" value="Encriptar" onclick="validateText()" />
+          <input class="btn_cripto"
           type="button"
           value="Desencriptar"
           onclick="desencriptarTexto()" />
+
         </div>
       </form>
-      <div id="area_salida" class="div_salida_texto">
-        <img
+    </div>  
+ 
+      <div id="area_salida" class="div_salida_texto" >
+        <p class="salida_texto" id="salida_texto" onclick="copiarTexto()" title="Click aqui para copiar el texto">
+          <img
           class="imagen"
           id="imagen"
           src="./assets/encriptador2.jpg"
           alt="persona_encriptando" />
-        <br />
-        <p class="salida_texto" id="salida_texto">
-          El texto encriptado aparecera aqui!
         </p>
-        <button class="btn_copiar_texto" onclick="copiarTexto()">
-          ¡Copiar texto!
-        </button>
+      </div>
+
+      <div class="switch_metodo">
+        <p>
+          Oprime el switch para seleccionar un tipo de encriptación: Metodo Alura o Metodo MDV.
+        </p>
+        <!-- Switch para seleccionar el método de encriptación -->
+        <label class="switch">
+            <input type="checkbox" id="metodoSwitch" onchange="toggleMetodo()">
+            <span class="slider round"></span>
+        </label>
+        <span id="metodoLabel" class="metodoLabel">Encriptación: MDV</span>
       </div>
     </main>
     <script src="./js/encriptador.js"></script>
